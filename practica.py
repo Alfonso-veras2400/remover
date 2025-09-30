@@ -31,108 +31,113 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     
     html, body, [class*="css"] {
-        font-family: 'Inter', sans-serif;  # Fuente moderna y legible
+        font-family: 'Inter', sans-serif;
     }
-    
-    .main {
-        background-color: #0d1117;  # Fondo oscuro principal
-        color: #e6edf3;  # Color de texto claro
-    }
-    
+
+    /* Fondo principal */
     .stApp {
-        background-color: #0d1117;  # Fondo de la aplicación
+        background-color: #ffffff; # fondo blanco puro
+        color: #1a1a1a;
     }
-    
+
+    /* Encabezados */
     h1, h2, h3, h4, h5, h6 {
-        color: #58a6ff !important;  # Color azul para encabezados
-        font-weight: 600;  # Peso de fuente seminegro
+        color: #0077cc !important;
+        font-weight: 600;
     }
-    
-    .stMetric {
-        background-color: #161b22 !important;  # Fondo oscuro para métricas
-        border-radius: 10px;  # Bordes redondeados
-        padding: 15px;  # Espaciado interno
-        border: 1px solid #30363d;  # Borde sutil
+
+    /* Métricas */
+    div[data-testid="stMetricValue"] {
+        background-color: #f0f8ff;
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid #b3e0ff;
     }
-    
-    .stSelectbox, .stMultiSelect {
-        background-color: #161b22 !important;  # Fondo oscuro para selectores
-        border: 1px solid #30363d !important;  # Borde sutil
-        border-radius: 8px;  # Bordes redondeados
-        color: #e6edf3 !important;  # Color de texto claro
+
+    /* Selectores */
+    div[data-baseweb="select"] {
+        background-color: #f5fff5;
+        border: 1px solid #99e699;
+        border-radius: 8px;
+        color: #1a1a1a;
     }
-    
-    .stSlider {
-        background-color: #161b22 !important;  # Fondo oscuro para sliders
-        border-radius: 8px;  # Bordes redondeados
-        padding: 10px;  # Espaciado interno
+
+    /* Sliders */
+    div[data-testid="stSlider"] {
+        background-color: #f0f8ff;
+        border-radius: 8px;
+        padding: 10px;
     }
-    
-    .sidebar .sidebar-content {
-        background-color: #161b22 !important;  # Fondo oscuro para barra lateral
+
+    /* Sidebar */
+    section[data-testid="stSidebar"] {
+        background-color: #f5fff5 !important;
     }
-    
-    .block-container {
-        padding-top: 1rem;  # Espaciado superior
-        padding-bottom: 1rem;  # Espaciado inferior
+
+    /* Contenedor principal */
+    section.main > div {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
-    
+
+    /* Botones */
     .stButton > button {
-        background-color: #1f6feb !important;  # Color azul para botones
-        color: white !important;  # Texto blanco en botones
-        border: none !important;  # Sin borde
-        border-radius: 6px !important;  # Bordes redondeados
-        padding: 0.5rem 1rem !important;  # Espaciado interno
-        font-weight: 500 !important;  # Peso de fuente medio
+        background-color: #33cc99 !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 6px !important;
+        padding: 0.5rem 1rem !important;
+        font-weight: 500 !important;
     }
-    
+
     .stButton > button:hover {
-        background-color: #388bfd !important;  # Color más claro al pasar el mouse
+        background-color: #29a87a !important;
     }
-    
+
+    /* Tarjetas personalizadas */
     .metric-card {
-        background: linear-gradient(135deg, #161b22, #0d1117);  # Gradiente para tarjetas de métricas
-        border-radius: 12px;  # Bordes redondeados
-        padding: 20px;  # Espaciado interno
-        border: 1px solid #30363d;  # Borde sutil
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);  # Sombra para profundidad
+        background: linear-gradient(135deg, #f0f8ff, #f5fff5);
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid #cce7ff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    
+
     .insight-box {
-        background-color: #161b22;  # Fondo oscuro para cajas de insights
-        border-left: 4px solid #58a6ff;  # Borde izquierdo azul
-        padding: 15px;  # Espaciado interno
-        border-radius: 0 8px 8px 0;  # Bordes redondeados
-        margin: 10px 0;  # Margen vertical
+        background-color: #f0f8ff;
+        border-left: 4px solid #33cc99;
+        padding: 15px;
+        border-radius: 0 8px 8px 0;
+        margin: 10px 0;
     }
-    
+
     .chart-container {
-        background-color: #161b22;  # Fondo oscuro para contenedores de gráficos
-        border-radius: 12px;  # Bordes redondeados
-        padding: 20px;  # Espaciado interno
-        border: 1px solid #30363d;  # Borde sutil
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);  # Sombra para profundidad
-        margin-bottom: 20px;  # Margen inferior
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid #e6e6e6;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        margin-bottom: 20px;
     }
-    
+
     .footer {
-        text-align: center;  # Texto centrado
-        padding: 20px;  # Espaciado interno
-        color: #8b949e;  # Color gris para el pie de página
-        font-size: 0.9em;  # Tamaño de fuente más pequeño
+        text-align: center;
+        padding: 20px;
+        color: #4d4d4d;
+        font-size: 0.9em;
     }
-    
+
     .participant-card {
-        background-color: #161b22;  # Fondo oscuro para tarjetas de participantes
-        border-radius: 10px;  # Bordes redondeados
-        padding: 15px;  # Espaciado interno
-        border: 1px solid #30363d;  # Borde sutil
-        margin: 5px 0;  # Margen vertical
+        background-color: #f5fff5;
+        border-radius: 10px;
+        padding: 15px;
+        border: 1px solid #99e699;
+        margin: 5px 0;
     }
-    
+
     .emoji-header {
-        font-size: 1.5em;  # Tamaño de fuente para emojis
-        margin-right: 10px;  # Margen derecho
+        font-size: 1.5em;
+        margin-right: 10px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -505,9 +510,9 @@ else:
         st.markdown("""
         <div class='insight-box'>
             <h4>🎯 Público Objetivo Principal</h4>
-            <p>La distribución de edades revela que el segmento seleccionado está compuesto principalmente por clientes entre <strong>{}</strong> años, lo que sugiere un enfoque en adultos jóvenes a medianos con potencial de compra moderado a alto.</p>
+            <p>La distribución de edades revela que el segmento seleccionado está compuesto principalmente por clientes entre <strong>{:.2f}</strong> años, lo que sugiere un enfoque en adultos jóvenes a medianos con potencial de compra moderado a alto.</p>
         </div>
-        """.format(df_filtrado['Edad'].describe().iloc[2]), unsafe_allow_html=True)
+        """.format(df_filtrado['Edad'].mean()), unsafe_allow_html=True)
         
         st.markdown("""
         <div class='insight-box'>
@@ -540,7 +545,7 @@ else:
 
     # Recomendaciones estratégicas
     st.markdown("""
-    <div style='background-color: #161b22; padding: 20px; border-radius: 12px; border: 1px solid #30363d; margin-top: 20px;'>
+    <div style='background-color: #f0f8ff; padding: 20px; border-radius: 12px; border: 1px solid #30363d; margin-top: 20px;'>
         <h4>💡 Estrategia Recomendada</h4>
         <p>👉 <strong>Segmentación Dinámica:</strong> Aprovecha los filtros para crear campañas personalizadas basadas en edad, género y estado civil. Combina los insights para crear mensajes específicos que resuenen con cada subsegmento.</p>
         <p>👉 <strong>Enfoque en Gasto:</strong> Dirige recursos hacia el grupo de edad con mayor poder adquisitivo identificado y adapta el contenido del mensaje para maximizar la conversión.</p>
